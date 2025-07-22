@@ -9,57 +9,61 @@
 <body class="bg-gray-100 font-sans">
     <header class="bg-green-600 text-white p-4">
         <div class="container mx-auto flex justify-between items-center">
-             <img src="https://misaboracolombia.com/cdn/shop/files/logos-2_3600px_700x.jpg?v=1613740883" alt="Sabor Colombiano" class="h-20 w 50">
-            <h1 class="text-2xl font-bold">PRODUCTOS COLOMBIANOS</h1>
-           </div>
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <img src="https://misaboracolombia.com/cdn/shop/files/logos-2_3600px_700x.jpg?v=1613740883" alt="Sabor Colombiano" class="h-20 w 50">
+                <h1 class="text-2xl sm:text-4xl font-bold">PRODUCTOS COLOMBIANOS</h1>
+            </div>
             <div class="relative">
                 <button id="cart-toggle" class="flex items-center space-x-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 "
-                      System: 24" stroke-width="2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                     <span id="cart-count" class="bg-red-500 text-white rounded-full px-2 py-1 text-xs">0</span>
                 </button>
-                <div id="cart-dropdown" class="hidden absolute right-0 mt-2 w-80 bg-white text-black shadow-lg rounded-lg p-4">
+                <div id="cart-dropdown" class="hidden absolute right-0 mt-2 w-64 sm:w-80 bg-white text-black shadow-lg rounded-lg p-4">
                     <h2 class="text-lg font-bold mb-2">Carrito</h2>
                     <div id="cart-items" class="space-y-2"></div>
                     <p class="font-bold mt-2">Total: €<span id="cart-total">0.00</span></p>
                     <div class="mt-4">
+                        <h3 class="text-sm font-medium mb-2">Datos de Pago y Envío</h3>
+                        <div class="space-y-3">
                         <form id="payment-form" class="space-y-4">
                             <div>
-                                <label for="name" class="block text-sm font-medium">Nombre Completo</label>
-                                <input type="text" id="name" class="w-full p-2 border rounded" required>
+                                <label for="full-name" class="block text-sm font-medium">Nombre Completo</label>
+                                <input type="text" id="full-name" class="w-full p-2 border rounded" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium">Correo Electrónico</label>
+                                <input type="email" id="email" class="w-full p-2 border rounded" required>
+                            </div>
+                            <div>
+                                <label for="address" class="block text-sm font-medium">Dirección de Envío</label>
+                                <input type="text" id="address" class="w-full p-2 border rounded" placeholder="Calle, número, piso" required>
                             </div>
                             <div>
                                 <label for="city" class="block text-sm font-medium">Ciudad</label>
                                 <input type="text" id="city" class="w-full p-2 border rounded" required>
                             </div>
                             <div>
-                                <label for="address" class="block text-sm font-medium">Dirección</label>
-                                <textarea id="address" class="w-full p-2 border rounded" required></textarea>
+                                <label for="postal-code" class="block text-sm font-medium">Código Postal</label>
+                                <input type="text" id="postal-code" class="w-full p-2 border rounded" required>
                             </div>
                             <div>
-                                <label for="id-number" class="block text-sm font-medium">Documento de Identidad (DNI/Cédula)</label>
-                                <input type="text" id="id-number" class="w-full p-2 border rounded" required placeholder="Ej: 12345678Z o 1234567890">
-                            </div>
-                            <div>
-                                <label for="age-confirm" class="block text-sm font-medium">
-                                    <input type="checkbox" id="age-confirm" required> Confirmo que soy mayor de 18 años
-                                </label>
+                                <label for="phone" class="block text-sm font-medium">Teléfono (Opcional)</label>
+                                <input type="tel" id="phone" class="w-full p-2 border rounded">
                             </div>
                             <div>
                                 <label for="payment-method" class="block text-sm font-medium">Método de Pago</label>
                                 <select id="payment-method" class="w-full p-2 border rounded" required>
-                                    <option value="" disabled selected>Seleccione un método</option>
                                     <option value="credit-card">Tarjeta de Crédito/Débito</option>
                                     <option value="paypal">PayPal</option>
                                     <option value="bank-transfer">Transferencia Bancaria</option>
                                     <option value="bizum">Bizum</option>
                                 </select>
                             </div>
-                            <button type="submit" id="checkout" class="w-full bg-green-600 text-white p-2 mt-4 rounded hover:bg-green-700">Finalizar Compra</button>
-                        </form>
+                        </div>
                     </div>
+                    <button id="checkout" class="w-full bg-green-600 text-white p-2 mt-4 rounded hover:bg-green-700">Finalizar Compra</button>
                 </div>
             </div>
         </div>
