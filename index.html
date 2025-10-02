@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Jesus Pardo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .cover-photo {
+            position: relative;
+            height: 300px;
+            background-color: #1877f2;
+            background-image: url('https://i.pinimg.com/736x/7b/fd/87/7bfd875e85fbbed980e9df59bcde8579.jpg'); /* Reemplaza con tu foto de portada */
+            background-size: cover;
+            background-position: center;
+        }
+        .profile-photo {
+            position: absolute;
+            bottom: -80px;
+            left: 20px;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid white;
+            background-image: url('https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/221300db3fd4811653b43954e8ce9f48~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=438884dc&x-expires=1759608000&x-signature=PNa8vuq6O%2BFf4ngo0Ya%2BNecpgyc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=maliva');
+            background-size: cover;
+            background-position: center;
+        }
+        .header {
+            padding: 20px;
+            background-color: white;
+            margin-top: 80px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .occupation {
+            font-size: 18px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .section {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            min-width: 300px;
+        }
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        li::before {
+            content: "•";
+            color: #1877f2;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .interests li::before {
+            content: "-";
+            margin-right: 5px;
+        }
+        /* Estilo del QR */
+        .qr-code {
+            margin-top: 15px;
+            width: 90px;   /* Ajusta el tamaño del QR aquí */
+            height: 90px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .profile-photo {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .header {
+                text-align: center;
+                margin-top: 100px;
+            }
+            .sections {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cover-photo">
+        <div class="profile-photo"></div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1 class="name">Jesus Pardo Ortiz</h1>
+            <p class="occupation">Estudiante</p>
+        </div>
+        <div class="sections">
+            <div class="section personal-data">
+                <h2>Mis Datos Personales</h2>
+                <ul>
+                    <li>Email: Pardoortizjesusdaniel@gmail.com</li>
+                    <li>Teléfono: +57 322 5478250</li>
+                    <li>Dirección: Calle 34 # 25 - 100, Maicao - La Guajira</li>
+                    <li>Prototipo De Mi Tienda online: <a href="https://yuseploto.github.io/" target="_blank">https://yuseploto.github.io/</a></li>
+                    <li>Fecha de Nacimiento: 06/09/2006</li>
+                </ul>
+                <h2>QR De Mi Prototipo De Tienda Online</h2>
+                <img src="c:\Users\JESUS PARDO\Downloads\CANDY SHOP.png" alt="Código QR" class="qr-code">
+            </div>
+            <div class="section interests-occupations">
+                <h2>Mis Gustos e Intereses</h2>
+                <ul class="interests">
+                    <li>Programación y Diseño gráfico 💻</li>
+                    <li>Viajar 🛩️</li>
+                    <li>Deportes ⚽</li>
+                    <li>Animación japonesa 📺</li>
+                    <li>Todo Tipo De Música 🎵</li>
+                </ul>
+                <h2>Mis Ocupaciones</h2>
+                <ul>
+                    <li>Estudiante En Sin Fronteras, Actualmente</li>
+                    <li>Trabajo En Una Tienda Familiar</li>
+                    <li>Hago Presentaciones En PowerPoint Y Trabajos En Word</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
